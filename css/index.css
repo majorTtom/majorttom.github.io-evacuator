@@ -138,6 +138,7 @@ ul.slick-dots {
 .header__phone {
   display: flex;
   justify-content: end;
+  flex-direction: row-reverse;
 }
 .header__phone a {
   margin-top: 50px;
