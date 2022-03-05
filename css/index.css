@@ -1,0 +1,565 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Philosopher:wght@400;700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: #fff;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img {
+  /*  max-width: 100%;*/
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1155px;
+  margin: 0 auto;
+}
+
+.slick-list.draggable {
+  width: 100%;
+  height: 700px;
+}
+.slick-list.draggable img {
+  height: auto;
+}
+
+.slick-prev, .slick-next,
+ul.slick-dots {
+  display: none !important;
+}
+
+#slider {
+  height: 700px;
+}
+
+.header {
+  position: relative;
+  height: 820px;
+  background-image: url(../img/bcg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /**/
+  /**/
+  /**/
+  /**/
+  /* .header__nav */
+  /* .header__nav-item */
+  /* .header__nav-title */
+  /* .header__nav-phone */
+  /* .header__wrap */
+  /* .header__item */
+  /* .header__circle */
+  /* .header__button */
+  /*.header__mobile*/
+}
+.header__phone {
+  display: flex;
+  justify-content: end;
+}
+.header__phone a {
+  margin-top: 50px;
+  display: block;
+  width: 120px;
+  border-bottom: 1px solid #fff;
+  transition: 0.5s;
+}
+.header__phone a:hover {
+  opacity: 0.7;
+}
+.header__phone p {
+  color: #fff;
+  font-family: 'PT Sans', 'Arial';
+  font-size: 18px;
+}
+.header__title {
+  margin-top: 80px;
+}
+.header__title h1 {
+  text-transform: uppercase;
+  font-family: 'PT Sans', 'Arial';
+  font-size: 65px;
+  font-weight: bold;
+  color: #fff;
+}
+.header__entrails {
+  position: relative;
+  z-index: 5;
+}
+.header__bcg {
+  z-index: 1;
+  display: block;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+.header__nav {
+  display: flex;
+  width: 960px;
+  border-bottom: 1px solid #373737;
+  margin: 50px auto;
+  justify-content: space-between;
+  height: 25px;
+  margin-bottom: 0;
+}
+.header__nav-title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #373737;
+}
+.header__nav-phone {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #373737;
+}
+.header__wrap {
+  margin: 140px auto;
+  display: grid;
+  grid-template-columns: 42% 58%;
+}
+.header__item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+}
+.header__circle {
+  width: 490px;
+  height: 490px;
+  border-radius: 50%;
+  position: relative;
+}
+.header__circle img {
+  position: absolute;
+  right: 0;
+  left: -30px;
+  top: -140px;
+  margin: 0 auto;
+  width: 106%;
+}
+.header__button {
+  margin-top: 90px;
+  width: 242px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  transition: .4s ease;
+}
+.header__button:hover {
+  border: 2px solid #000;
+  background: #000;
+}
+.header__mobile {
+  display: none;
+}
+
+.title {
+  padding-top: 160px;
+  /* .title__line */
+}
+.title h3 {
+  font-family: Philosopher, Roboto Condensed, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 41px;
+  text-transform: uppercase;
+  color: #373737;
+}
+.title__line {
+  margin-top: 10px;
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #000;
+}
+
+.process {
+  padding-bottom: 200px;
+  /* .process__wrap */
+  /* .process__item */
+  /* .process__img */
+  /* .process__img-block */
+  /* .process__list */
+  /* .process__li */
+  /* .process__number */
+  /* .process__text */
+}
+.process__wrap {
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.process__list ul {
+  display: flex;
+  flex-direction: column;
+}
+.process__li {
+  display: flex;
+  height: 110px;
+  border-top: 1px solid #373737;
+  align-items: center;
+}
+.process__li:last-child {
+  border-bottom: 1px solid #373737;
+}
+.process__number {
+  font-family: Roboto Condensed, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color: #373737;
+}
+.process__text {
+  margin-left: 70px;
+  width: 482px;
+  font-family: Roboto Condensed, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #373737;
+}
+
+.why {
+  padding-bottom: 100px;
+  /* .why__wrap */
+  /* .why__item */
+  /* .why__text */
+  /* .why__info */
+  /* .why__slab */
+  /* .why__icon */
+  /* .why__descr */
+}
+.why__wrap {
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 47% 53%;
+}
+.why__text {
+  width: 543px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #373737;
+}
+.why__text:last-child {
+  margin-top: 60px;
+}
+.why__info {
+  width: 510px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 30px;
+  margin-left: 115px;
+}
+.why__slab {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 240px;
+  height: 150px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  box-shadow: 4px 8px 8px #0000002e;
+  border-radius: 25px;
+  transition: .5s ease;
+}
+.why__slab:nth-child(2) {
+  justify-self: end;
+}
+.why__slab:last-child {
+  justify-self: end;
+}
+.why__slab:hover {
+  background-color: #000;
+}
+.why__slab:hover .why__icon:before,
+.why__slab:hover .why__descr {
+  color: #fff;
+}
+.why__icon:before {
+  transition: .5s ease;
+}
+.why__descr {
+  transition: .5s ease;
+  font-family: Roboto Condensed, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: #373737;
+}
+
+.icon-kg:before {
+  font-size: 70px;
+  color: #000;
+}
+
+.icon-time:before {
+  font-size: 70px;
+  color: #000;
+}
+
+.icon-money:before {
+  font-size: 70px;
+  color: #000;
+}
+
+.icon-pig:before {
+  font-size: 70px;
+  color: #000;
+}
+
+.call {
+  background-color: #000;
+  /*border-top-left-radius: 100px;
+  border-top-right-radius: 100px;*/
+  padding-bottom: 100px;
+  position: relative;
+  /* .call__title */
+  /* .call__line */
+  /*.call__wrap*/
+  /* .call__button */
+}
+.call__title {
+  padding: 50px;
+}
+.call__title h3 {
+  text-transform: lowercase;
+  color: #fff;
+}
+.call__line {
+  display: none;
+  background-color: #fff;
+}
+.call__wrap {
+  display: flex;
+  justify-content: center;
+}
+.call__button {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 70px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 37px;
+  text-align: center;
+  border: 2px solid #FFF;
+  border-radius: 50px;
+  transition: .5s ease;
+}
+.call__button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer {
+  background-color: #fff;
+  padding-bottom: 25px;
+  /* .footer__wrap */
+  /* .footer__item */
+  /* .footer__title */
+  /* .footer__link */
+  /* .footer__text */
+  /* .footer__autor */
+}
+.footer__wrap {
+  align-items: center;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__title {
+  font-family: 'PT Sans', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: inherit;
+  color: #000;
+}
+.footer__link {
+  display: none;
+  margin-top: 10px;
+  font-family: Philosopher, Roboto Condensed, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.footer__text {
+  margin-top: 5px;
+  font-family: Roboto Condensed, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+}
+.footer__autor {
+  display: none;
+  font-family: Philosopher, Roboto Condensed, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.footer-stamp {
+  transition: .5s ease;
+  display: block;
+  margin-top: 10px;
+}
+.footer-stamp img {
+  width: 70px;
+}
+.footer-stamp:hover {
+  opacity: .7;
+}
+
+/*ani,ate*/
+/*animate selectors*/
+.animate__up {
+  transform: translate(0, 90%);
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.animate__left {
+  transform: translate(-100%, 0);
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.animate__right {
+  transform: translate(100%, 0);
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.animate__active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
